@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
+  "repository": "github:zapaiamarce/ra-input-array-sortable",
   "description": "A sortable input for React Admin.",
   "keywords": [
     "react-admin",
