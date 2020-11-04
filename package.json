@@ -1,0 +1,39 @@
+{
+  "name": "ra-input-array-sortable",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "array-move": "^3.0.1",
+    "react-sortable-hoc": "^1.11.0"
+  },
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -cw"
+  },
+  "peerDependencies": {
+    "@material-ui/icons/DragIndicator": "^4.0.0",
+    "@material-ui/icons/HighlightOff": "^4.0.0",
+    "@material-ui/core/Typography": "^4.0.0",
+    "@material-ui/icons/AddCircle": "^4.0.0",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "react": ">=16.0.0",
+    "react-admin": "^3.9.0",
+    "array-move": "^3.0.1",
+    "react-sortable-hoc": "^1.11.0"
+  },
+  "devDependencies": {
+    "rollup": "^2.33.1",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@rollup/plugin-commonjs": "^16.0.0",
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "array-move": "^3.0.1",
+    "react": "^17.0.1",
+    "react-admin": "^3.9.6",
+    "react-sortable-hoc": "^1.11.0",
+    "rollup-plugin-typescript2": "^0.29.0",
+    "typescript": "^4.0.5"
+  }
+}
