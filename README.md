@@ -1,3 +1,5 @@
+A sortable input for React Admin.
+
 # Setup
 
 ```sh

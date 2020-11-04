@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "main": "dist/index.js",
   "license": "MIT",
+  "description": "A sortable input for React Admin.",
+  "keywords": [
+    "react-admin",
+    "input",
+    "sortable"
+  ],
   "dependencies": {
     "array-move": "^3.0.1",
     "react-sortable-hoc": "^1.11.0"
