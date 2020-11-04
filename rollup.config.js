@@ -13,7 +13,7 @@ export default {
       exports: "named",
     },
   ],
-  external: [...Object.keys(pkg.peerDependencies || {})],
+  external: [...Object.keys(pkg.peerDependencies || {}), ...pkg.external],
   plugins: [
     resolve(),
     commonjs({
