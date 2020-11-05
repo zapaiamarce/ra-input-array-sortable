@@ -1,4 +1,4 @@
-import React, { useState, cloneElement } from "react";
+import React, { cloneElement } from "react";
 import {
   SortableContainer,
   SortableElement,
@@ -52,7 +52,7 @@ const SortableList = SortableContainer(
         {items &&
           items.map((value, index) => (
             <SortableItem
-              key={`item-${value}`}
+              key={`item-${index}`}
               baseSource={baseSource}
               fields={fields}
               index={index}
@@ -74,10 +74,6 @@ export default function Sortable(props) {
   const { source, children: fields } = props;
   const { label } = props;
 
-  //   const onSortStart = (start) => {
-  //     console.log({ start });
-  //   };
-
   const onSortEnd = ({ oldIndex, newIndex }) => {
     onChange(arrayMove(items, oldIndex, newIndex));
   };
@@ -89,16 +85,17 @@ export default function Sortable(props) {
   };
 
   const addEmpty = () => {
+    const baseItems = items || [];
     if (fields.length) {
-      onChange(items.concat({}));
+      onChange(baseItems.concat({}));
     } else {
-      onChange(items.concat(null));
+      onChange(baseItems.concat(null));
     }
   };
 
   return (
     <div style={{ padding: "20px 0" }}>
-      <Typography variant="h6">{label}</Typography>
+      <Typography variant="h6">{label || source}</Typography>
       <SortableList
         useDragHandle
         items={items}
