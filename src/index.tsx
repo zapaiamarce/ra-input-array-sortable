@@ -5,7 +5,7 @@ import {
   SortableHandle,
 } from "react-sortable-hoc";
 import arrayMove from "array-move";
-import { useInput, required } from "react-admin";
+import { useInput, useRecordContext } from "react-admin";
 import DragIndicatorIcon from "@material-ui/icons/DragIndicator";
 import HighlightOffIcon from "@material-ui/icons/HighlightOff";
 import Typography from "@material-ui/core/Typography";
@@ -66,11 +66,13 @@ const SortableList = SortableContainer(
 );
 
 export default function Sortable(props) {
+  const input = useInput(props);
+
   const {
-    input: { name, onChange, value: items, ...rest },
-    meta: { touched, error },
+    field: { name, onChange, value: items, ...rest },
+    fieldState: { isTouched, error },
     isRequired,
-  } = useInput(props);
+  } = input;
   const { source, children: fields } = props;
   const { label } = props;
 
